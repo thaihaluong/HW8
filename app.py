@@ -1,7 +1,18 @@
 from flask import Flask,render_template,url_for,request
 import mongoengine
+import pymongo
 
 from mongoengine import *
+
+# Config MongoDB
+uri = "mongodb://admin:admin@ds119598.mlab.com:19598/cafeteria"
+client = pymongo.MongoClient(uri)
+db = client.get_default_database()
+
+# Get MENU collection
+menu_items = db["menu"].find()
+menu_items_length = db["menu"].count()
+print(menu_items[0])
 
 
 class User(Document):
