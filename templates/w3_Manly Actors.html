@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<title>BEAUTY</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../static/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+.w3-sidenav a,.w3-sidenav h4 {font-weight:bold}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidenav/menu -->
+<nav class="w3-sidenav w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidenav"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="http://pngimg.com/upload/white_roses_PNG2796.png" style="width:45%;" class="w3-round"><br><br>
+    <h4 class="w3-padding-0"><b>JANE'S HOT LIST</b></h4>
+    <p class="w3-text-grey">Check it out!</p>
+  </div>
+  <a href="#portfolio" onclick="w3_close()" class="w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a>
+  <a href="#about" onclick="w3_close()" class="w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
+  <a href="#contact" onclick="w3_close()" class="w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+
+  <div class="w3-section w3-padding-top w3-large">
+    <a href="#" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-purple w3-show-inline-block"><i class="fa fa-instagram"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-yellow w3-show-inline-block"><i class="fa fa-snapchat"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-red w3-show-inline-block"><i class="fa fa-pinterest-p"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-light-blue w3-show-inline-block"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-linkedin"></i></a>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidenav on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header class="w3-container" id="portfolio">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-opennav w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <h1><b>HERE THE LIST COMES. ENJOY YOURSELF!</b></h1>
+    <div class="w3-section w3-bottombar w3-padding-16">
+      <span class="w3-margin-right">Filter:</span>
+      <button class="w3-btn">HIM</button>
+      <button class="w3-btn w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i><a href="{{ url_for("more") }}"> Add more</a></button>
+      <button class="w3-btn w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
+    </div>
+  </header>
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://s-media-cache-ak0.pinimg.com/originals/fc/93/ba/fc93bab795ef5c68b6445168182c2e2f.jpg" alt="Orlando Bloom" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Orlando Bloom</b></p>
+        <p>The one and only Legolas. No word can describe how handsome he is :* :*</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://peopledotcom.files.wordpress.com/2016/08/patrick-dempsey-04-1024-1.jpg" alt="Partrick Dempsey" style="width:100%"  class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Partrick Dempsey</b></p>
+        <p>Let's meet Dr. Dreamy - the sexiest doctor ever!!!</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="http://67.media.tumblr.com/82182f413b1b63bdf29ad81d370dda05/tumblr_o5yfmwZNg61rcgyrwo1_1280.jpg" alt="Chris Evan" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Chris Evan</b></p>
+        <p>He's so so charming that I wanna become Agent Carter too badly :x </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://pmcdeadline2.files.wordpress.com/2013/10/the-wolverine-slashes-past-the-competition-heres-your-box-office-roundup__131023035823.jpg" alt="Wolverine" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Huge Jackman</b></p>
+        <p>Who can be the next Wolverine? Whoever, but no one can be a better Wolverine than Huge Jackman.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://media.tumblr.com/de715fa1f806b5d478d386208c5d2f35/tumblr_inline_mnrpeaBbQb1qz4rgp.gif" alt="Ben" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Benedict Cumberbatch</b></p>
+        <p>Brainy is the new sexy.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="http://data.whicdn.com/images/114881545/large.gif" alt="James McAvoy" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>James McAvoy</b></p>
+        <p>Look at his eyes ... Can't even get out...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <ul class="w3-pagination">
+      <li><a class="w3-black" href="#">1</a></li>
+      <li><a class="w3-hover-black" href="#">»</a></li>
+    </ul>
+  </div>
+
+  <!-- Images of Me -->
+  <div class="w3-row-padding w3-padding-16" id="about">
+    <div class="w3-col m6 w3-container w3-padding-16">
+      <img src="../static/IMG_4742.JPG" alt="Me" style="width:68%">
+    </div>
+    <div class="w3-col m6">
+      <img src="../static/Jane.jpg" alt="Me" style="width:68%">
+    </div>
+  </div>
+
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+    <h4><b>About Me</b></h4>
+    <p>Just me, myself and I, exploring the universe of unknownment. I'm happy to share my world with you.</p>
+    <hr>
+
+ </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-large w3-grey">
+    <h4 id="contact"><b>Contact Me</b></h4>
+    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+        <p>halt68.ftu@email.com</p>
+      </div>
+      <div class="w3-third w3-teal">
+        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+        <p>Hanoi, Vietnam</p>
+      </div>
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+        <p>+841 686 094 092</p>
+      </div>
+    </div>
+    <hr class="w3-opacity">
+    <form action="form.asp" target="_blank">
+      <div class="w3-group">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-group">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-group">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-btn w3-padding-large w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-dark-grey">
+  <div class="w3-row-padding">
+    <div class="w3-third">
+      <h3>THANK YOU!</h3>
+      <p>Thanks for visiting my page :) See you again!</p>
+      <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="http://pngimg.com/upload/white_roses_PNG2796.png" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">To be updated</span><br>
+          <span>Come back later...</span>
+        </li>
+        <li class="w3-padding-16">
+          <img src="http://pngimg.com/upload/white_roses_PNG2796.png" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">To be updated</span><br>
+          <span>Come back later...</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Beauty</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
+      </p>
+    </div>
+
+  </div>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24">Powered by <a href="http://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidenav
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
