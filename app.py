@@ -4,7 +4,10 @@ import pymongo
 
 from mongoengine import *
 
-
+# Config MongoDB
+uri = "mongodb://admin:admin@ds133388.mlab.com:33388/janeluong"
+actor = pymongo.MongoClient(uri)
+db = actor.get_default_database()
 
 class User(Document):
     name1 = StringField()
@@ -21,13 +24,17 @@ user_name="admin"
 password="admin"
 mongoengine.connect(db_name, host=host, port=port, username=user_name, password=password)
 
-
 @app.route('/')
 def hello_world():
     return render_template("w3_About me.html")
-@app.route('/zai')
-def man():
-    return render_template("w3_Manly Actors.html")
+
+
+# Get USER collection
+user_more = db["user"].find()
+actor_list_length = db["user"].count()
+new_actors=user_more
+
+
 
 @app.route('/more',methods=["GET","POST"])
 def more():
@@ -44,7 +51,9 @@ def more():
 
         return render_template("thankyou.html")
 
-
+@app.route('/zai')
+def man():
+    return render_template("w3_Manly Actors.html",new_actor = new_actors)
 
 if __name__ == '__main__':
     app.run()
