@@ -5,9 +5,9 @@ import pymongo
 from mongoengine import *
 
 # Config MongoDB
-uri = "mongodb://admin:admin@ds133388.mlab.com:33388/janeluong"
-actor = pymongo.MongoClient(uri)
-db = actor.get_default_database()
+#uri = "mongodb://admin:admin@ds133388.mlab.com:33388/janeluong"
+#actor = pymongo.MongoClient(uri)
+#db = actor.get_default_database()
 
 class User(Document):
     name1 = StringField()
@@ -16,6 +16,42 @@ class User(Document):
     user1 = StringField()
 
 app = Flask(__name__)
+
+#data access:
+#list: l[0]
+#dictionary: d["name"]
+#object: data + action
+
+#OOP: Object Oriented Programming
+class Ninja:
+    def __init__(self,name,atk,def_,hp): #Constructor - xây dựng nên object
+        self.name=name
+        self.atk = atk
+        self.def_ = def_
+        self.hp = hp
+    def print (self): #Context
+        print("{0},{1},{2},{3}".format(self.name,self.atk,self.def_,self.hp))
+    def attack (self,other):
+        print("{0} is attacking {1}".format(self,other))
+        if self.atk > other.def_:
+            other.hp -= self.atk
+        else:
+            self.hp -= other.atk
+
+#Init
+ninja1 = Ninja("Naruto",10,9,8) #Ninja() -> __init__; ninja1 -> self
+ninja2 = Ninja("Sasuke",9,6,7)
+print(ninja1.atk)
+print(ninja2.atk)
+
+ninja1.atk = 10 # . -> of
+
+print(ninja1.atk)
+print(ninja2.atk)
+
+ninja1.attack(ninja1)
+ninja1.print()
+ninja2.print()
 
 host ="ds133388.mlab.com"
 port =33388
@@ -30,11 +66,9 @@ def hello_world():
 
 
 # Get USER collection
-user_more = db["user"].find()
-actor_list_length = db["user"].count()
-new_actors=user_more
-
-
+#user_more = db["user"].find()
+#actor_list_length = db["user"].count()
+#new_actors=user_more
 
 @app.route('/more',methods=["GET","POST"])
 def more():
@@ -53,7 +87,7 @@ def more():
 
 @app.route('/zai')
 def man():
-    return render_template("w3_Manly Actors.html",new_actor = new_actors)
+    return render_template("w3_Manly Actors.html",new_actor = User.objects)
 
 if __name__ == '__main__':
     app.run()
