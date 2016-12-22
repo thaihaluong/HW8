@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UPDATE</title>
+    <link rel="stylesheet" href="../static/w3.css">
+   <style>
+.w3-Georgia {
+  font-family: "Georgia", sans-serif;
+}
+</style>
+</head>
+<body>
+  <form method="post" action ="{{ url_for('update',id)}} ">
+        <div class = "w3-container w3-padding w3-yellow "  align="center">
+            <h3 class="w3-Georgia">Updating ...</h3>
+        </div>
+      <div class ="w3-Georgia w3-large">
+        <div  class ="w3-container w3-padding">
+        <label for ="name2">About his name:</label><br>
+        <input  class="w3-input" type="text" name="name2"><br>
+        <BR>
+        <label for="desc2">Anything else about him?</label><br>
+        <input class="w3-input" type="text" name="desc2"><br>
+            <br>
+        <label for="img2">His other sexier photo:</label><br>
+        <input class="w3-input" type="url" name="img2"><br>
+            <br>
+        <label for ="user2">Contributor's name:</label><br>
+        <input class="w3-input" type="text" name="user2"><br>
+
+        <br>
+        <input type="submit">
+        </div>
+      </div>
+
+
+    </form>
+</body>
+</html>

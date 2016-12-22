@@ -95,6 +95,21 @@ def deletezai(id):
     user.delete()
     return "Why you delete him???!"
 
+@app.route('/update/<string:id>',methods=["GET","POST"])
+def update(id):
+    user = User.objects().with_id(id)
+
+    if request.method == "GET":
+        return render_template("edit.html",id=id)
+    elif request.method=="POST":
+        hname=request.form["name2"]
+        hdesc=request.form["desc2"]
+        himg=request.form["img2"]
+        contri=request.form["user2"]
+
+        user.update(set__name1=hname, set__desc1=hdesc, set__img1=himg, set__user1=contri)
+
+        return "Done"
 
 if __name__ == '__main__':
     app.run()
