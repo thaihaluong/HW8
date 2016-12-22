@@ -113,7 +113,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <div class="w3-container w3-white">
         <p><b>{{ his.name1 }}</b></p>
         <p>{{ his.desc1 }}</p>
-          <p><h6 class="w3-text-grey">Contributed by {{his.user1 }}</h6></p>
+        <p><h6 class="w3-text-grey">Contributed by {{his.user1 }}</h6></p>
+          <p><a href="/deletezai/{{ his.id }}"><button class="w3-btn"> DELETE </button></a></p>
       </div>
     </div>
     {% endfor %}

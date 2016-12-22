@@ -1,4 +1,4 @@
-from flask import Flask,render_template,url_for,request
+from flask import Flask,render_template,url_for,request,redirect
 import mongoengine
 import pymongo
 
@@ -88,6 +88,13 @@ def more():
 @app.route('/zai')
 def man():
     return render_template("w3_Manly Actors.html",new_actor = User.objects)
+#delete
+@app.route('/deletezai/<string:id>')
+def deletezai(id):
+    user = User.objects().with_id(id)
+    user.delete()
+    return "Why you delete him???!"
+
 
 if __name__ == '__main__':
     app.run()
